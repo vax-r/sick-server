@@ -9,7 +9,6 @@ import (
 func RandomerrorHandler(w http.ResponseWriter, r *http.Request) {
 	num := rand.Intn(100)
 	if ( num < 50 ) {
-		w.WriteHeader(http.StatusOK)
 		fmt.Fprintln(w, "Status 200 - OK")
 		return
 	}
